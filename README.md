@@ -2,7 +2,7 @@
 
 **EduGenie** is a state-of-the-art, AI-powered learning assistant designed to ignite curiosity and streamline academic workflows. Powered by Google Gemini 2.5 Flash, it offers a premium, localized learning experience with a focus on both aesthetics and functionality.
 
-![EduGenie Hero]
+![EduGenie Hero](./image.png)
 
 ## 🎨 Premium Theme: Soft Neutral & Muted Pastel
 EduGenie features a custom-designed **Soft Neutral + Muted Pastel** aesthetic, providing a calm, focused environment for students and educators.
