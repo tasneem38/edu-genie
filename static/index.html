@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie - AI Powered Learning Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- KaTeX for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+    <script src="/static/marked.min.js"></script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container navbar-inner">
+            <div class="logo">
+                <span class="logo-text">EduGenie <span class="badge-tag">v2.0</span></span>
+            </div>
+            <div class="nav-links">
+                <span class="status-indicator">
+                    <span class="dot"></span> Gemini 2.5 Active
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-badge">AI-POWERED ACADEMIC COMPANION</div>
+            <h1>Ignite Your Learning with <span class="gradient-text">AI Intelligence</span></h1>
+            <p>Your personal academic companion powered by Google Gemini.</p>
+        </section>
+
+        <div class="app-card">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="ask">Ask</button>
+                <button class="tab-btn" data-tab="explain">Explain</button>
+                <button class="tab-btn" data-tab="quiz">Quiz</button>
+                <button class="tab-btn" data-tab="summarize">Summarize</button>
+            </div>
+
+            <div class="tab-content" id="ask-tab">
+                <div class="input-group">
+                    <textarea id="ask-input" placeholder="What's on your mind? Ask any academic question..."></textarea>
+                    <button id="ask-submit" class="primary-btn">Ask EduGenie</button>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="explain-tab">
+                <div class="input-row">
+                    <input type="text" id="explain-input" placeholder="Enter a topic to explain...">
+                    <select id="explain-level">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                    <button id="explain-submit" class="primary-btn">Simplify</button>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="quiz-tab">
+                <div class="input-row">
+                    <input type="text" id="quiz-input" placeholder="Topic for quiz...">
+                    <select id="quiz-difficulty">
+                        <option value="Easy">Easy</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                    <button id="quiz-submit" class="primary-btn">Generate Quiz</button>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="summarize-tab">
+                <div class="input-group">
+                    <textarea id="summarize-input" placeholder="Paste lengthy content here to summarize..."></textarea>
+                    <div class="controls-row">
+                        <select id="summarize-mode">
+                            <option value="Bullet points">Bullet Points</option>
+                            <option value="Short paragraph">Short Paragraph</option>
+                            <option value="Detailed summary">Detailed Summary</option>
+                        </select>
+                        <button id="summarize-submit" class="primary-btn">Summarize</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error-display" class="error-display hidden">
+                <span class="error-icon">⚠️</span>
+                <p id="error-message"></p>
+                <button id="error-close" class="close-btn">&times;</button>
+            </div>
+
+            <div id="loading" class="loading-state hidden">
+                <div class="spinner"></div>
+                <p>EduGenie is thinking...</p>
+            </div>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="result-header">
+                    <h3>Response</h3>
+                    <button id="copy-btn" class="icon-btn">📋</button>
+                </div>
+                <div id="result-content" class="markdown-body"></div>
+            </div>
+
+            <div id="quiz-container" class="quiz-container hidden">
+                <!-- Quiz questions will be injected here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
