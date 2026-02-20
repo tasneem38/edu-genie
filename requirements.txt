@@ -3,5 +3,6 @@ uvicorn
 google-generativeai
 python-dotenv
 pydantic
-jinja2
 python-multipart
+jinja2
+markupsafe
