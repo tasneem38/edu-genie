@@ -60,5 +60,3 @@ Visit `http://127.0.0.1:8000` in your browser.
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-Created with ✨ by [tasneem38](https://github.com/tasneem38)
